@@ -10,8 +10,4 @@ cents=`expr $cents % 10`
 nickels=`expr $cents / 5`
 cents=`expr $cents % 5`
 
-echo "input:    $amt"
-echo "quarters: $quarters"
-echo "dimes:    $dimes"
-echo "nickels:  $nickels"
-echo "pennies:  $cents"
+echo "$amt pennies equals $quarters quarter(s), $dimes dime(s), $nickels nickel(s) & $cents penny(ies)"
