@@ -2,7 +2,7 @@
 
 read -p "Enter amount of pennies: " cents
 
-amt =`expr $cents + 0`
+amt=`expr $cents + 0`
 quarters=`expr $cents / 25`
 cents=`expr $cents % 25`
 dimes=`expr $cents / 10`
