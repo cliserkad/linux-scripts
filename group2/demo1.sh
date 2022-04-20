@@ -8,8 +8,7 @@ read city
 
 if [ $age -lt 18 ] 
 then
-    type -u city
-    if [ "$city" = "RANDOLPH" ]
+    if [ "$city" = "randolph" ]
     then 
         echo "Congratulations. You get financial aid"
     else
