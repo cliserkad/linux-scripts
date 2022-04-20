@@ -1,20 +1,26 @@
 #!/bin/bash
 
-echo -n "Enter your age: "
-read age
+# get input
+read -p "Enter your age: " age
+read -p "Enter where you live: " city
 
-echo -n "Enter where you live: "
-read city
+# syntax with unnecessary nesting
+# if [ $age -lt 18 ]
+# then
+#     if [ "$city" = "randolph" ]
+#     then
+#         echo "Congratulations. You get financial aid"
+#     else
+#         echo "Sorry, no aid for you"
+#     fi
+# else
+#    echo "Sorry, no AID for you."
+# fi
 
-if [ $age -lt 18 ] 
+# better syntax with logical AND
+if [ $age -lt 18 -a "$city" = "randolph" ]
 then
-    if [ "$city" = "randolph" ]
-    then 
-        echo "Congratulations. You get financial aid"
-    else
-        echo "Sorry, no aid for you"
-    fi
-else 
-    echo "Sorry, no AID for you." 
+    echo "Congratulations, you get FA"
+else
+    echo "Sorry, you don't get financial aid"
 fi
-
